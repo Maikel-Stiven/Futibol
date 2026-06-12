@@ -23,7 +23,7 @@ public class TrainingController {
 
     @PostMapping
     public ResponseEntity<MessageResponseDTO> registerTraining(@RequestBody TrainingRequestDTO payload){
-        boolean saved = teamService.saveTraining(payload.getTrainingNumber(), payload.getPlayers());
+        boolean saved = teamService.saveTraining(payload.getTrainingNumber(), payload getPlayers());
 
         if (!saved) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)

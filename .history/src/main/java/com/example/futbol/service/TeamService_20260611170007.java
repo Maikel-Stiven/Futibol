@@ -49,7 +49,7 @@ public class TeamService {
             return new PlayerResponseDTO(entry.getKey(), average);
         })
 
-        .sorted((a, b) -> Double.compare(b.getWeeklyAverage(), a.getWeeklyAverage()))
+        .sorted((a, b) -> Double.compare(b.getWeeklyAverage(), a.getWeeklyAverage))
         .limit(Starting_Players_Count)
         .collect(Collectors.toList());
     

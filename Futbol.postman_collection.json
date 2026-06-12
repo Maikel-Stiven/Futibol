@@ -1,14 +1,14 @@
 {
   "info": {
-    "_postman_id": "8b2760de-76ca-466c-a53f-cd8b06e29c20",
-    "name": "futbol",
+    "_postman_id": "2343d5f4-0c25-413f-b539-4cdd5574f5f9",
+    "name": "Futbol",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "54439970",
-    "_collection_link": "https://go.postman.co/collection/54439970-8b2760de-76ca-466c-a53f-cd8b06e29c20?source=collection_link"
+    "_collection_link": "https://go.postman.co/collection/54439970-2343d5f4-0c25-413f-b539-4cdd5574f5f9?source=collection_link"
   },
   "item": [
     {
-      "name": "registro entrenamientos",
+      "name": "Prueba de error",
       "request": {
         "method": "GET",
         "header": []
@@ -16,7 +16,7 @@
       "response": []
     },
     {
-      "name": "titulares",
+      "name": "Registros",
       "request": {
         "method": "GET",
         "header": []
@@ -24,7 +24,7 @@
       "response": []
     },
     {
-      "name": "Control de errores",
+      "name": "mostrar titulares",
       "request": {
         "method": "GET",
         "header": []

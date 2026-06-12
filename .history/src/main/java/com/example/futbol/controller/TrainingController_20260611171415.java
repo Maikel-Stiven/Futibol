@@ -23,7 +23,7 @@ public class TrainingController {
 
     @PostMapping
     public ResponseEntity<MessageResponseDTO> registerTraining(@RequestBody TrainingRequestDTO payload){
-        boolean saved = teamService.saveTraining(payload.getTrainingNumber(), payload.getPlayers());
+        boolean saved = teamService.saveTraining(payload.getTrainingNumber(), payload getPlayers());
 
         if (!saved) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)
@@ -31,17 +31,6 @@ public class TrainingController {
         }
 
         return ResponseEntity.ok(new MessageResponseDTO("Entrenamiento # " + payload.getTrainingNumber() + " registrado correctamente"));
-    }
-
-    @GetMapping("/titulares")
-    public ResponseEntity<?> getStarting(){
-        try{
-            List<PlayerResponseDTO> lineup = teamService.getStarting();
-            return ResponseEntity.ok(lineup);
-        }catch (IllegalStateException exception){
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                .body(new MessageResponseDTO(exception.getMessage()));
-        }
     }
     
 }

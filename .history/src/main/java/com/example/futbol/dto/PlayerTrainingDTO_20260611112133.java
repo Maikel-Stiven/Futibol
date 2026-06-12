@@ -10,7 +10,5 @@ import lombok.NoArgsConstructor;
 
 public class PlayerTrainingDTO {
     private String name;
-    private double shotPower;
-    private double speed;
-    private int effectivePasses;
+    private String 
 }

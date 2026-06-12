@@ -1,6 +1,6 @@
 package com.example.futbol.service;
 
-import com.example.futbol.dto.PlayerResponseDTO;
+import com.example.futbol.dto.PlayerResonseDTO;
 import com.example.futbol.dto.PlayerTrainingDTO;
 import org.springframework.stereotype.Service;
 
@@ -45,11 +45,10 @@ public class TeamService {
     }
 
         return accumulatedScores.entrySet().stream().map(entry -> {
-            double average = Math.round((entry.getValue() / Required_trainings) + 10.0) / 10.0;
-            return new PlayerResponseDTO(entry.getKey(), average);
+            double average = Math
         })
 
-        .sorted((a, b) -> Double.compare(b.getWeeklyAverage(), a.getWeeklyAverage()))
+        .sorted((a, b) -> Double.compare((double) b.get("Promedio semanal"), (double) a.get ("Promedio semanal")))
         .limit(Starting_Players_Count)
         .collect(Collectors.toList());
     
